@@ -86,3 +86,31 @@ def existe_cliente(clientes, dni):
             print("Cliente registrado.")
     return False
     print("Cliente no registrado.")
+
+#Menu
+def menu_clientes():
+    while True:
+        print("========== GESTIÓN DE CLIENTES ==========")
+
+        print("1. Registrar cliente")
+        print("2. Consultar cliente")
+        print("3. Mostrar clientes")
+        print("4. Eliminar cliente")
+        print("5. Verificar existencia de cliente")
+        print("6. Volver")
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == "1":
+            registrar_cliente()
+        elif opcion == "2":
+            buscar_cliente()
+        elif opcion == "3":
+            mostrar_clientes()
+        elif opcion == "4":
+            eliminar_cliente()
+        elif opcion == "5":
+            existe_cliente()
+        elif opcion == "6":
+            break
+        else:
+            print("Opción inválida.")

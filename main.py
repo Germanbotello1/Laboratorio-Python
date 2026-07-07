@@ -1,20 +1,33 @@
-from clientes import registrar_cliente, mostrar_clientes
+from clientes import menu_clientes
+from bicicletas import menu_bicicletas
+from alquiler import menu_alquiler
 
-clientes = []
+#Menu principal del sistema
+def menu_principal():
+    while True:
+        print("========================================")
+        print("   SISTEMA DE ALQUILER DE BICICLETAS   ")
+        print("========================================")
 
-while True:
-    print("---Menú Clientes---")
-    print("1. Registrar cliente")
-    print("2. Mostrar clientes")
-    print("3. Salir")
-    opcion = input("Seleccione una opción: ")
+        print("1. Gestión de clientes")
+        print("2. Gestión de bicicletas")
+        print("3. Gestión de alquileres")
+        print("4. Estadísticas")
+        print("5. Salir")
+        opcion = input("\nSeleccione una opción: ")
 
-    if opcion == "1":
-        registrar_cliente(clientes)
-    elif opcion == "2":
-        mostrar_clientes(clientes)
-    elif opcion == "3":
-        print("Saliendo del programa.")
-        break
-    else:
-        print("Opción inválida. Por favor, seleccione una opción válida.")
+        if opcion == "1":
+            menu_clientes()
+        elif opcion == "2":
+            menu_bicicletas()
+        elif opcion == "3":
+            menu_alquiler()
+        elif opcion == "4":
+            print("Módulo de estadísticas en desarrollo.")
+        elif opcion == "5":
+            print("Gracias por utilizar el sistema.")
+            break
+        else:
+            print("Opción inválida.")
+
+menu_principal()
